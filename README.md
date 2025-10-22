@@ -210,7 +210,7 @@ graph LR
 - AA verification status
 - Final decision with loan plans
 
-## 🔐 Security & Privacy
+## Security & Privacy
 
 - ✅ AWS credentials stored in `.env` (gitignored)
 - ✅ Documents stored in S3 with encryption
@@ -219,7 +219,7 @@ graph LR
 - ✅ Temporary files cleaned after processing
 - ✅ CORS configured for secure API access
 
-## 📈 API Endpoints
+## API Endpoints
 
 ### Customer Management
 ```
@@ -241,7 +241,7 @@ POST /approve_loan                 # Approve a loan application
 
 **API Documentation**: `http://localhost:8000/docs` (Swagger UI)
 
-## 🧪 Testing
+## Testing
 
 ### Upload Sample Documents to S3
 ```bash
@@ -262,7 +262,7 @@ curl -X POST http://localhost:8000/run_workflow \
 curl http://localhost:8000/results/LID1755598891411
 ```
 
-## 📋 Required Documents
+## Required Documents
 
 For each loan application, upload to S3:
 - ✅ `payslip.pdf` - Latest salary slip
