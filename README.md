@@ -7,22 +7,22 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-009688.svg)](https://fastapi.tiangolo.com/)
 [![AWS](https://img.shields.io/badge/AWS-Bedrock-orange.svg)](https://aws.amazon.com/bedrock/)
 
-## 📖 Overview
+## Overview
 
 LendIQ is a comprehensive loan verification system that leverages AI agents to automate the end-to-end loan application review process. It combines document tampering detection, cross-validation, account aggregator verification, and intelligent decision-making to streamline loan approvals.
 
-### 🎯 Key Features
+### Key Features
 
-- **🔍 Document Tampering Detection**: ResNet50 + ELA + Noise Analysis with GradCAM heatmaps
-- **✅ Multi-Document Cross-Validation**: Automated verification across payslips, offer letters, bank statements, and Form16
-- **🏦 Account Aggregator Integration**: Real-time financial data verification using AA framework
-- **🤖 AI Decision Agent**: AWS Bedrock-powered intelligent loan decision making
-- **📊 Risk Assessment**: DTI ratio calculation, loan eligibility, and risk tiering
-- **☁️ Cloud-Native**: S3 storage, serverless processing, no local file clutter
-- **🎨 Modern UI**: React-based dashboard with Material-UI components
-- **📈 Real-Time Analytics**: Track applications, escalations, and approved loans
+- **Document Tampering Detection**: ResNet50 + ELA + Noise Analysis with GradCAM heatmaps
+- **Multi-Document Cross-Validation**: Automated verification across payslips, offer letters, bank statements, and Form16
+- **Account Aggregator Integration**: Real-time financial data verification using AA framework
+- **AI Decision Agent**: AWS Bedrock-powered intelligent loan decision making
+- **Risk Assessment**: DTI ratio calculation, loan eligibility, and risk tiering
+- **Cloud-Native**: S3 storage, serverless processing, no local file clutter
+- **Modern UI**: React-based dashboard with Material-UI components
+- **Real-Time Analytics**: Track applications, escalations, and approved loans
 
-## 🚀 Quick Start
+##     Quick Start
 
 ### Prerequisites
 
@@ -82,7 +82,7 @@ npm run dev
 ```
 Frontend runs on: `http://localhost:3000`
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Python/
@@ -114,7 +114,7 @@ Python/
 └── Documents/                    # Local temp storage (gitignored)
 ```
 
-## 🔧 Core Components
+## Core Components
 
 ### 1. Document Analyzer Agent (`da_strands.py`)
 - **ResNet50 Model**: Pre-trained CNN for image classification
@@ -146,7 +146,7 @@ Python/
 - State management and error handling
 - S3 upload/download coordination
 
-## 📊 Agentic Workflow
+##  Agentic Workflow
 
 The system uses a **multi-agent orchestration** approach with parallel and sequential execution:
 
@@ -174,17 +174,17 @@ START
 ### Execution Flow:
 
 1. **Parallel Execution (Node 1 & 2)**:
-   - 🔍 **Document Analyzer**: Detects tampering using ResNet50 + ELA + Noise Analysis
-   - ✅ **Cross Validator**: Validates data across payslip, offer, bank statement, Form16
+   - **Document Analyzer**: Detects tampering using ResNet50 + ELA + Noise Analysis
+   - **Cross Validator**: Validates data across payslip, offer, bank statement, Form16
 
 2. **Sequential Execution (Node 3)**:
-   - 🏦 **AA Agent**: Verifies financial data from Account Aggregator (triggered after cross-validation)
+   - **AA Agent**: Verifies financial data from Account Aggregator (triggered after cross-validation)
 
 3. **Sequential Execution (Node 4)**:
-   - 🤖 **Decision Agent**: AWS Bedrock LLM analyzes all agent results and makes final decision
+   - **Decision Agent**: AWS Bedrock LLM analyzes all agent results and makes final decision
 
 4. **Sequential Execution (Node 5)**:
-   - 📦 **Finalizer**: Combines all results, saves to S3, updates application lists
+   - **Finalizer**: Combines all results, saves to S3, updates application lists
 
 ### Decision Outcomes:
 
@@ -196,7 +196,7 @@ graph LR
     B -->|Rejected| E[❌ Rejected]
 ```
 
-## 🎨 User Interface
+## User Interface
 
 ### Dashboard
 - **New Applicants**: View and process pending applications
@@ -271,7 +271,7 @@ For each loan application, upload to S3:
 - ✅ `form16.pdf` - Tax certificate
 - ✅ `AA_data.json` - Account aggregator data
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Issue: Poppler not found
 **Solution**: Install Poppler and add to system PATH
@@ -288,7 +288,7 @@ For each loan application, upload to S3:
 ### Issue: GradCAM generation fails
 **Solution**: Ensure PyTorch and torchvision are installed correctly
 
-## 🔄 Data Flow
+## Data Flow
 
 1. **Upload**: Documents uploaded to S3 bucket
 2. **Download**: Backend downloads to temp folder
@@ -297,7 +297,7 @@ For each loan application, upload to S3:
 5. **Cleanup**: Temporary files deleted
 6. **Display**: Frontend fetches and displays results
 
-## 🏆 Technology Stack
+##  Technology Stack
 
 ### Backend
 - **Framework**: FastAPI, Uvicorn
@@ -320,7 +320,7 @@ For each loan application, upload to S3:
 - **OCR**: Tesseract
 - **PDF Rendering**: Poppler
 
-## 📝 Environment Variables
+##  Environment Variables
 
 ```env
 # AWS Configuration
@@ -336,13 +336,13 @@ BACKEND_PORT=8000
 FRONTEND_PORT=3000
 ```
 
-## 📖 Documentation
+## Documentation
 
 - **Setup Guide**: See [SETUP.md](SETUP.md)
 - **API Docs**: http://localhost:8000/docs
 - **Workflow Details**: See `orchestration_strands.py`
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -352,15 +352,15 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 Proprietary - All rights reserved
 
-## 👥 Authors
+## Authors
 
 - Development Team - Initial work and ongoing maintenance
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - AWS Bedrock for LLM capabilities
 - Strands SDK for agent orchestration
