@@ -1,0 +1,142 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# AWS Credentials (never commit these!)
+*.pem
+*.key
+credentials
+config
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Document storage (uploaded documents)
+Documents/
+documents/
+temp/
+tmp/
+
+# GradCAM images (if any local files are created)
+*_gradcam.png
+
+# Model files (large files)
+*.pth
+*.pt
+*.h5
+*.pkl
+*.joblib
+
+# Data files
+*.csv
+*.xlsx
+*.json.backup
+
+# Node modules (frontend)
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# Backend specific
+backend/__pycache__/
+backend/*.log
+
+# Test files
+test_*.py
+*_test.py
+tests/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# S3 downloaded files
+*.s3_download
+
+# Temporary customer folders
+customer_*
+LID*/
+
+# Results and outputs
+final_results.json
+verification_summary.json
+extracted_documents.json
+forensic_analysis_results.json
+
+# PDF files (documents)
+*.pdf
+
+# Image files (except placeholder images)
+*.jpg
+*.jpeg
+*.png
+!logo.png
+!placeholder.png

@@ -1,0 +1,47 @@
+# Core Framework
+strands
+
+# AWS Services
+boto3
+botocore
+
+# Web Framework (Backend)
+fastapi
+uvicorn
+python-multipart
+
+# AI/ML Frameworks
+torch
+torchvision
+
+# Image Processing
+opencv-python
+numpy
+Pillow
+scikit-image
+matplotlib
+
+# PDF Processing
+pdf2image
+pytesseract
+PyMuPDF
+
+# LangChain and LLM
+langchain-aws
+langchain
+
+# Data Processing
+pandas
+tabulate
+
+# HTTP Requests
+requests
+
+# CORS Support
+fastapi-cors
+
+# Date/Time
+python-dateutil
+
+# Retry Logic
+tenacity
